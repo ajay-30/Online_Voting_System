@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>Online Voting System-Registration</title>
+  <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+
+<style>
+  #address{
+    border-radius: 5px;
+    padding: 10px;
+    width:20%;
+  }
+  #photo
+  {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width:30%;
+  }
+  #Role
+  {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width:30%;
+  }
+  #Role select
+  {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  #name{
+    border-radius: 5px;
+    padding: 10px;
+    width:20%;
+  }
+  #number{
+    border-radius: 5px;
+    padding: 10px;
+    width:20%;
+  }
+  #password{
+    border-radius: 5px;
+    padding: 10px;
+    width:20%;
+  }
+  #cpassword{
+    border-radius: 5px;
+    padding: 10px;
+    width:20%;
+  }
+
+
+</style>
+<center>
+<div id="HeaderSection">
+  <h1>Online Voting System</h1>
+</div>
+<hr>
+<div id="bodySection">
+  <h2>Registration</h2>
+  <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+    <label for="name" >Name :</label>
+    <input id="name" type="text" name="name" placeholder="Enter your name"><br><br>
+    <label for="mobile" >Mobile :</label>
+    <input id="mobile" type="tel" name="mobile" placeholder="Enter your phone number"><br><br>
+    <label for="password" >Password :</label>
+    <input id="password" type="password" name="password" placeholder="Enter you password"><br><br>
+    <label for="cpassword" >Confirm : </label>
+    <input id="cpassword" type="password" name="cpassword" placeholder="Confirm your password"><br><br>
+    <label for="address" >Address :</label>
+    <input id="address" type="text" name="address" placeholder="Enter your address"><br><br>
+      <div id="photo">
+        Upload Image : <input type="file" name="photo">
+      </div><br>
+      <div id="Role">
+        Select Your Role : <select name="role">
+        <option value="1">Voter</option>
+        <option value="2">Group</option>
+        <br>
+      </select><br><br>
+      </div>
+    <br>
+    <button
+            style="padding: 5px;
+                   border-radius: 5px;
+                   background-color: rgb(111, 144, 194);
+                   color: black">
+      Register</button><br><br>
+    Already user?<a href ="../login.html">Login here</a>
+
+  </form>
+</div>
+</center>
+</body>
+</html>
